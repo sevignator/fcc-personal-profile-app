@@ -4,19 +4,19 @@ const PORT = 3000;
 
 const app = express();
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.send("Welcome to Camper Bot's homepage!");
 });
 
-app.get('/hobbies', (req, res) => {
+app.get('/hobbies', (_req, res) => {
   res.send('I cycle, go boating, and play guitar.');
 });
 
-app.get('/skills', (req, res) => {
+app.get('/skills', (_req, res) => {
   res.send('JavaScript, Node.js, and Express.js!');
 });
 
-app.get('/api/profile', (req, res) => {
+app.get('/api/profile', (_req, res) => {
   res.json({
     name: 'Camper Bot',
     hobbies: ['cycling', 'boating', 'guitar'],
@@ -25,5 +25,5 @@ app.get('/api/profile', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}.`)
+  console.log(`Server running on port ${PORT}.`);
 });
